@@ -34,8 +34,8 @@ window.PROJECTS = [
   },
   {
     id: "motion-energy-report-docs",
-    title: "운동과 에너지 분석 실험실",
-    description: "동영상에서 운동 궤적과 에너지를 분석하고 Google Docs 탐구 보고서로 제출합니다.",
+    title: "포물선 운동 분석 실험실",
+    description: "동영상에서 포물선 운동 궤적과 에너지 변화를 분석하고 Google Docs 탐구 보고서로 제출합니다.",
     category: "과학·탐구",
     url: "https://script.google.com/macros/s/AKfycbxKS8oi71v0gin2XlyYLdVkJC4GD6xBusu0RJhMXrCkTfdHJ5VgxKar5ry2srvNCw8xXQ/exec",
     tags: ["Apps Script", "물리", "운동", "에너지", "보고서"],
@@ -84,7 +84,7 @@ window.PROJECTS = [
     url: "https://smart-teacher-call.vercel.app",
     tags: ["호출", "태블릿", "노트북", "블루투스", "교사"],
     featured: false,
-    thumbnail: "assets/thumbnails/soundboard.webp",
+    thumbnail: "assets/thumbnails/smart-teacher-call-v2.webp",
     notice: "기본 이름은 익명이며, 이름 관리에서 기기별로 변경·저장"
   },
   {
