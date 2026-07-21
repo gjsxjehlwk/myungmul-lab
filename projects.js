@@ -33,6 +33,28 @@ window.PROJECTS = [
     notice: "교사는 비밀키, 학생은 수업코드로 입장"
   },
   {
+    id: "motion-energy-report-docs",
+    title: "운동과 에너지 분석 실험실",
+    description: "동영상에서 운동 궤적과 에너지를 분석하고 Google Docs 탐구 보고서로 제출합니다.",
+    category: "과학·탐구",
+    url: "https://script.google.com/macros/s/AKfycbxKS8oi71v0gin2XlyYLdVkJC4GD6xBusu0RJhMXrCkTfdHJ5VgxKar5ry2srvNCw8xXQ/exec",
+    tags: ["Apps Script", "물리", "운동", "에너지", "보고서"],
+    featured: false,
+    thumbnail: "assets/thumbnails/report-docs.webp",
+    notice: "학번·이름 입력 전 학교의 개인정보 운영 기준 확인"
+  },
+  {
+    id: "science-report-slides",
+    title: "과학 탐구 발표 슬라이드 작성기",
+    description: "탐구 주제와 측정값을 입력해 Google Slides 발표 자료와 PDF를 자동 생성합니다.",
+    category: "과학·탐구",
+    url: "https://script.google.com/macros/s/AKfycbxY6L9Abkxfbnsp0uE9Vyjkxlk0qB5zkWKHq_fSFUYzE0bH9KVcKBWYPEu2tfcp-ZzXcg/exec",
+    tags: ["Apps Script", "Google Slides", "PDF", "탐구", "발표"],
+    featured: false,
+    thumbnail: "assets/thumbnails/report-slide.webp",
+    notice: "Google Drive 파일 생성 권한이 필요할 수 있음"
+  },
+  {
     id: "random-penalty-roulette",
     title: "랜덤 벌칙 룰렛",
     description: "활동의 긴장감과 재미를 더하는 간단한 무작위 룰렛입니다.",
@@ -56,11 +78,11 @@ window.PROJECTS = [
   },
   {
     id: "ipad-soundboard",
-    title: "iPad 교사 호출",
-    description: "복도에서 교사를 빠르게 호출하고 이름 목록을 기기에서 관리하는 사운드보드입니다.",
+    title: "스마트 교무실 호출벨",
+    description: "복도 단말에서 교사를 선택해 교무실 블루투스 스피커로 안내하는 호출 도구입니다.",
     category: "교사 업무",
-    url: "https://ipad-soundboard.vercel.app",
-    tags: ["호출", "iPad", "학급", "교사"],
+    url: "https://smart-teacher-call.vercel.app",
+    tags: ["호출", "태블릿", "노트북", "블루투스", "교사"],
     featured: false,
     thumbnail: "assets/thumbnails/soundboard.webp",
     notice: "기본 이름은 익명이며, 이름 관리에서 기기별로 변경·저장"
