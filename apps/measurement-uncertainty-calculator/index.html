@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12372a">
+  <title>측정 오차·불확도 계산기</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">MYUNGMUL SCIENCE LAB · DATA TOOL 01</div>
+    <h1>흩어진 측정값에서<br><em>신뢰할 수 있는 결론</em>까지.</h1>
+    <p>반복 측정 자료를 계산하고, 그래프로 읽고, 오차의 원인을 설명해 보세요. 모든 자료는 이 기기에서만 처리됩니다.</p>
+  </header>
+  <main>
+    <section class="panel input-panel" aria-labelledby="input-title">
+      <div class="section-heading"><span>01</span><div><h2 id="input-title">측정 기록</h2><p>쉼표, 공백, 줄바꿈을 섞어 입력할 수 있어요.</p></div></div>
+      <div class="field-grid">
+        <label>탐구 제목<input id="title" value="용수철 길이 반복 측정" maxlength="80"></label>
+        <label>측정량<input id="quantity" value="길이" maxlength="30"></label>
+        <label>단위<input id="unit" value="cm" maxlength="12"></label>
+        <label>참값 <small>(선택)</small><input id="true-value" type="number" step="any" placeholder="예: 12.0"></label>
+      </div>
+      <label class="wide-label" for="measurements">반복 측정값</label>
+      <textarea id="measurements" rows="6" spellcheck="false">12.1, 11.9, 12.0, 12.2, 11.8</textarea>
+      <p id="input-message" class="message" role="alert" aria-live="polite"></p>
+      <div class="actions">
+        <button id="example" class="primary">예제 자료 불러오기</button>
+        <button id="reset">전체 초기화</button>
+      </div>
+    </section>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="section-heading light"><span>02</span><div><h2 id="results-title">계산 결과</h2><p id="result-summary">측정값을 입력하면 바로 계산합니다.</p></div></div>
+      <div id="cards" class="cards"></div>
+      <div class="chart-card">
+        <div class="chart-head"><h3>측정값 분포</h3><div class="legend"><i></i> 측정값 <b></b> 평균 <strong></strong> ±표준편차</div></div>
+        <svg id="chart" viewBox="0 0 800 300" role="img" aria-label="측정값 분포 그래프"></svg>
+      </div>
+      <p class="caution">통계적 흩어짐은 측정 기기의 정확도 자체를 보증하지 않습니다. 기기의 눈금, 영점, 측정 방법도 함께 살펴보세요.</p>
+    </section>
+
+    <section class="panel reflection" aria-labelledby="reflection-title">
+      <div class="section-heading"><span>03</span><div><h2 id="reflection-title">해석 기록</h2><p>수치에서 발견한 특징을 과학적 설명으로 연결하세요.</p></div></div>
+      <label>오차의 원인은 무엇이었나요?<textarea id="cause" rows="3" maxlength="500" placeholder="측정자, 기기, 환경, 방법을 나누어 생각해 보세요."></textarea></label>
+      <label>다음 측정은 어떻게 개선할 수 있나요?<textarea id="improvement" rows="3" maxlength="500" placeholder="한 가지 변화를 구체적으로 적어 보세요."></textarea></label>
+      <div class="actions"><button id="download" class="primary">CSV 저장</button><button id="print">결과지 인쇄</button></div>
+      <details><summary>통계량과 유효숫자 도움말</summary><div class="help-grid"><p><b>표본표준편차</b><br>반복 측정값이 평균 주위에 얼마나 흩어졌는지 나타냅니다. 일부 측정으로 전체 경향을 추정하므로 n−1로 나눕니다.</p><p><b>표준오차</b><br>반복 측정으로 구한 평균이 얼마나 안정적인지 보여 줍니다. 표본 수가 많아지면 보통 작아집니다.</p><p><b>상대불확도</b><br>표준편차가 평균 크기의 몇 %인지 나타내 서로 다른 측정을 비교하기 좋습니다.</p><p><b>유효숫자</b><br>불확도의 첫 숫자가 1·2이면 두 자리, 그 외에는 한 자리로 표시하고 평균도 같은 소수 자리로 맞춥니다.</p></div></details>
+    </section>
+  </main>
+  <footer>측정 → 계산 → 그래프 해석 → 오차 원인 설명</footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

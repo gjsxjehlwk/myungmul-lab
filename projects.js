@@ -1,5 +1,38 @@
 window.PROJECTS = [
   {
+    id: "measurement-uncertainty-calculator",
+    title: "측정 오차·불확도 계산기",
+    description: "반복 측정값의 평균과 불확도를 계산하고 그래프·오차 원인까지 해석합니다.",
+    category: "과학·탐구",
+    url: "/apps/measurement-uncertainty-calculator/",
+    tags: ["과학", "측정", "불확도", "통계", "그래프"],
+    featured: true,
+    thumbnail: "assets/thumbnails/measurement-uncertainty.webp",
+    notice: "입력 자료는 서버로 전송되지 않음"
+  },
+  {
+    id: "smartphone-sensor-physics-lab",
+    title: "스마트폰 센서 물리 실험실",
+    description: "스마트폰의 가속도·방향·자기장 센서를 기록하고 시간 그래프로 분석합니다.",
+    category: "과학·탐구",
+    url: "/apps/smartphone-sensor-physics-lab/",
+    tags: ["물리", "센서", "가속도", "스마트폰", "실험"],
+    featured: true,
+    thumbnail: "assets/thumbnails/smartphone-sensor-lab.webp",
+    notice: "실제 센서 측정은 HTTPS와 기기 권한 필요"
+  },
+  {
+    id: "predict-response-board",
+    title: "수업 전 예측·응답 보드",
+    description: "실험 전 예측과 실험 후 응답을 익명으로 비교해 생각의 변화를 확인합니다.",
+    category: "과학·탐구",
+    url: "https://script.google.com/macros/s/AKfycbxZA-c5po0ofQtiPks3qkjYkhYXx824DpIDLyKXTrWwcvlK5vKnuDGsz54QCVF9vqbzmA/exec",
+    tags: ["과학", "예측", "응답", "Apps Script", "수업"],
+    featured: true,
+    thumbnail: "assets/thumbnails/predict-response-board.webp",
+    notice: "학생은 6자리 수업코드, 교사는 관리코드 사용"
+  },
+  {
     id: "mass-braking-distance",
     title: "질량과 제동거리",
     description: "질량과 속도가 제동거리에 미치는 영향을 직접 조작하며 탐구합니다.",
