@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5efdf" />
+    <meta
+      name="description"
+      content="과학·물리 교사가 직접 만든 수업과 생활 도구를 한곳에서 만나는 명물쌤의 탐구실"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="명물쌤의 탐구실" />
+    <meta property="og:title" content="명물쌤의 탐구실" />
+    <meta
+      property="og:description"
+      content="과학·물리 교사가 직접 만든 수업과 생활 도구"
+    />
+    <meta property="og:url" content="https://myungmul-lab.vercel.app" />
+    <meta property="og:image" content="https://myungmul-lab.vercel.app/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>명물쌤의 탐구실 | 수업과 생활 도구</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#project-list">프로젝트 목록으로 건너뛰기</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="명물쌤의 탐구실 홈">
+        <span class="brand-mark" aria-hidden="true">μ</span>
+        <span>명물쌤의 탐구실</span>
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="#featured">추천 탐구</a>
+        <a href="#projects">모든 프로젝트</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A PHYSICS TEACHER'S LAB NOTE · No. 10</p>
+          <h1 id="hero-title">명물쌤의<br /><span>탐구실</span></h1>
+          <p class="hero-intro">
+            교실의 궁금증에서 출발해 직접 만든<br />수업 도구와 생활 실험을 모았습니다.
+          </p>
+          <a class="primary-button" href="#projects">
+            프로젝트 둘러보기 <span aria-hidden="true">↓</span>
+          </a>
+          <p class="creator-note">과학·물리 교사가 직접 만든 수업과 생활 도구</p>
+        </div>
+
+        <div class="hero-sketch" aria-label="속도와 시간의 관계를 나타낸 손그림 그래프">
+          <span class="tape tape-top" aria-hidden="true"></span>
+          <p class="sketch-label">오늘의 질문</p>
+          <p class="sketch-question">“관찰하면, 무엇이 보일까?”</p>
+          <div class="graph" aria-hidden="true">
+            <span class="axis axis-y"></span>
+            <span class="axis axis-x"></span>
+            <span class="curve"></span>
+            <span class="dot dot-a"></span>
+            <span class="dot dot-b"></span>
+            <span class="dot dot-c"></span>
+            <span class="graph-v">v</span>
+            <span class="graph-t">t</span>
+            <span class="formula">v = v₀ + at</span>
+          </div>
+          <p class="sketch-foot">관찰 → 질문 → 가설 → 다시 관찰</p>
+        </div>
+      </section>
+
+      <section class="featured-section section-shell" id="featured" aria-labelledby="featured-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-number">01 / FEATURED</p>
+            <h2 id="featured-title">오늘의 추천 탐구</h2>
+          </div>
+          <p>지금 바로 펼쳐 보기 좋은 세 가지 기록</p>
+        </div>
+        <div class="featured-grid" id="featured-list"></div>
+      </section>
+
+      <section class="projects-section section-shell" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading projects-heading">
+          <div>
+            <p class="section-number">02 / INDEX</p>
+            <h2 id="projects-title">프로젝트 찾아보기</h2>
+          </div>
+          <p>제목과 설명, 태그로 필요한 도구를 찾아보세요.</p>
+        </div>
+
+        <div class="search-panel" role="search">
+          <label for="project-search">프로젝트 검색</label>
+          <div class="search-row">
+            <div class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input
+                id="project-search"
+                type="search"
+                placeholder="예: 운동, AI, 물리, 일정"
+                autocomplete="off"
+              />
+            </div>
+            <button class="reset-button" id="reset-filters" type="button">검색·필터 초기화</button>
+          </div>
+          <div class="filter-row" aria-label="프로젝트 카테고리">
+            <button class="filter-button is-active" type="button" data-category="전체" aria-pressed="true">전체</button>
+            <button class="filter-button" type="button" data-category="과학·탐구" aria-pressed="false">과학·탐구</button>
+            <button class="filter-button" type="button" data-category="AI·수업 활동" aria-pressed="false">AI·수업 활동</button>
+            <button class="filter-button" type="button" data-category="교사 업무" aria-pressed="false">교사 업무</button>
+            <button class="filter-button" type="button" data-category="생활·창작 도구" aria-pressed="false">생활·창작 도구</button>
+          </div>
+        </div>
+
+        <div class="results-head">
+          <p id="result-count" role="status" aria-live="polite"></p>
+          <span aria-hidden="true">● 운영 중인 프로젝트</span>
+        </div>
+
+        <div class="project-grid" id="project-list"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <p class="empty-icon" aria-hidden="true">∅</p>
+          <h3>찾는 프로젝트가 없어요</h3>
+          <p>검색어를 바꾸거나 필터를 초기화해 보세요.</p>
+          <button class="primary-button" id="empty-reset" type="button">전체 프로젝트 보기</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>명물쌤의 탐구실</strong></p>
+      <p>작은 질문이 오래 기억되는 탐구가 되기를.</p>
+      <p class="footer-formula" aria-hidden="true">F = ma · E = ½mv² · λ = v/f</p>
+    </footer>
+
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
