@@ -59,7 +59,7 @@ window.PROJECTS = [
     title: "탐구톡 — 사이언스 챗봇",
     description: "정답 대신 질문과 증거로 학생이 스스로 과학 개념을 발견하도록 돕습니다.",
     category: "AI·수업 활동",
-    url: "https://science-inquiry-talk.eps12505975.chatgpt.site",
+    url: "https://science-chatbot.bosound.workers.dev",
     tags: ["과학", "AI", "챗봇", "탐구", "수업"],
     featured: true,
     thumbnail: "assets/thumbnails/science-chatbot.webp",
