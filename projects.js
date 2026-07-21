@@ -57,13 +57,13 @@ window.PROJECTS = [
   {
     id: "ipad-soundboard",
     title: "iPad 교사 호출",
-    description: "교실에서 학생 이름을 빠르게 호출하는 터치형 사운드보드입니다.",
+    description: "복도에서 교사를 빠르게 호출하고 이름 목록을 기기에서 관리하는 사운드보드입니다.",
     category: "교사 업무",
     url: "https://ipad-soundboard.vercel.app",
     tags: ["호출", "iPad", "학급", "교사"],
     featured: false,
     thumbnail: "assets/thumbnails/soundboard.webp",
-    notice: ""
+    notice: "기본 이름은 익명이며, 이름 관리에서 기기별로 변경·저장"
   },
   {
     id: "teacher-calendar",
