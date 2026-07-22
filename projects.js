@@ -180,25 +180,13 @@ window.PROJECTS = [
     notice: "점수는 이 브라우저에만 저장"
   },
   {
-    id: "quick-understanding-poll",
-    title: "빠른 이해도 투표",
-    description: "학생이 QR 또는 6자리 코드로 참여하고 교사가 결과 공개 시점을 정하는 즉석 이해도 투표입니다.",
-    type: "수업 보조 도구",
-    category: "AI·수업 활동",
-    url: "https://script.google.com/macros/s/AKfycbyraQFQYdh7Gptf4NjG2A560317W3oKgZPtwxR5xTAOxmp25qZWrA5ItS4yiSJBcXIXQg/exec",
-    tags: ["투표", "QR", "이해도", "Apps Script"],
-    featured: false,
-    thumbnail: "assets/thumbnails/understanding-poll.webp",
-    notice: "별칭과 응답은 교사가 삭제할 때까지 전용 스프레드시트에 보관"
-  },
-  {
     id: "speed-quiz-board",
-    title: "순발력 OX·초성 퀴즈판",
-    description: "학생이 QR로 입장해 OX·초성 문제에 답하고 정답과 응답 속도로 점수를 얻는 퀴즈판입니다.",
+    title: "빠른 퀴즈·투표판",
+    description: "한 수업코드에서 정답 없는 투표, 객관식, OX 문제를 진행하고 정답과 응답 속도를 바로 확인하는 수업 퀴즈판입니다.",
     type: "수업 보조 도구",
     category: "AI·수업 활동",
     url: "https://script.google.com/macros/s/AKfycbyAiaBE-mm19i6gtvdnSqdl0Y0ox-4XOIi92Z_kYl7uyGmNkpYVAQPSeIb2cNdXa8045g/exec",
-    tags: ["OX 퀴즈", "초성 퀴즈", "QR", "Apps Script"],
+    tags: ["투표", "객관식", "OX 퀴즈", "QR", "Apps Script"],
     featured: false,
     thumbnail: "assets/thumbnails/speed-quiz.webp",
     notice: "별칭과 응답은 교사가 삭제할 때까지 전용 스프레드시트에 보관"
