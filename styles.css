@@ -833,18 +833,18 @@ footer p:nth-child(2) {
 
 /* SOCAR_FRAME_THEME_START — shared visual language from coding/design.md */
 :root {
-  --socar-primary: oklch(0.620 0.219 257);
-  --socar-primary-strong: oklch(0.586 0.236 261);
-  --socar-primary-heavy: oklch(0.526 0.224 263);
-  --socar-primary-weak: oklch(0.962 0.022 248);
-  --socar-surface: oklch(0.967 0.004 271);
-  --socar-white: #fff;
-  --socar-text-strong: oklch(0.211 0.026 261);
-  --socar-text-primary: oklch(0.331 0.034 264);
-  --socar-text-secondary: oklch(0.519 0.039 263);
-  --socar-text-tertiary: oklch(0.687 0.035 265);
-  --socar-border: oklch(0.927 0.009 264);
-  --socar-focus: oklch(0.789 0.111 234);
+  --socar-primary: #2f6bff;
+  --socar-primary-strong: #1957eb;
+  --socar-primary-heavy: #1347c7;
+  --socar-primary-weak: #edf3ff;
+  --socar-surface: #f5f7fa;
+  --socar-white: #ffffff;
+  --socar-text-strong: #172033;
+  --socar-text-primary: #344054;
+  --socar-text-secondary: #667085;
+  --socar-text-tertiary: #98a2b3;
+  --socar-border: #e4e9f0;
+  --socar-focus: #7da7ff;
   --primary: var(--socar-primary) !important;
   --primary-color: var(--socar-primary) !important;
   --brand: var(--socar-primary) !important;
@@ -854,102 +854,158 @@ footer p:nth-child(2) {
   --purple: var(--socar-primary) !important;
   --violet: var(--socar-primary) !important;
   --mint: var(--socar-primary) !important;
+  --teal: var(--socar-primary) !important;
+  --coral: var(--socar-primary) !important;
+  --yellow: var(--socar-primary) !important;
+  --gold: var(--socar-primary) !important;
+  --navy: var(--socar-primary-heavy) !important;
+  --navy-dark: #10378f !important;
+  --navy-light: var(--socar-primary) !important;
+  --neon-blue: var(--socar-primary) !important;
+  --neon-cyan: var(--socar-primary) !important;
+  --neon-purple: var(--socar-primary) !important;
   --bg: var(--socar-surface) !important;
   --background: var(--socar-surface) !important;
+  --bg-primary: var(--socar-surface) !important;
+  --bg-secondary: var(--socar-white) !important;
+  --bg-color: var(--socar-surface) !important;
+  --bg-start: var(--socar-surface) !important;
+  --bg-end: var(--socar-surface) !important;
+  --bg-gradient: var(--socar-surface) !important;
   --paper: var(--socar-surface) !important;
+  --paper-light: var(--socar-white) !important;
   --surface: var(--socar-white) !important;
   --panel: var(--socar-white) !important;
+  --panel-bg: var(--socar-white) !important;
   --card: var(--socar-white) !important;
+  --card-bg: var(--socar-white) !important;
+  --glass-bg: rgba(255, 255, 255, .96) !important;
   --ink: var(--socar-text-strong) !important;
+  --ink-soft: var(--socar-text-secondary) !important;
   --text: var(--socar-text-primary) !important;
+  --text-main: var(--socar-text-primary) !important;
   --text-primary: var(--socar-text-primary) !important;
   --muted: var(--socar-text-secondary) !important;
+  --text-muted: var(--socar-text-secondary) !important;
   --text-secondary: var(--socar-text-secondary) !important;
+  --text-light: var(--socar-text-secondary) !important;
   --line: var(--socar-border) !important;
   --border: var(--socar-border) !important;
   --border-color: var(--socar-border) !important;
+  --glass-border: var(--socar-border) !important;
+  --card-border: var(--socar-border) !important;
+  --shadow: 0 1px 2px rgba(16, 24, 40, .05) !important;
+  --card-shadow: 0 1px 2px rgba(16, 24, 40, .05) !important;
+  --glass-shadow: 0 1px 2px rgba(16, 24, 40, .05) !important;
+  --shadow-neon: none !important;
+  --shadow-neon-green: none !important;
+  --shadow-neon-red: none !important;
 }
 
 html {
-  color-scheme: light;
-  background: var(--socar-white);
-}
-
-body {
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif !important;
-  color: var(--socar-text-primary);
+  color-scheme: light !important;
   background: var(--socar-surface) !important;
+}
+
+html body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif !important;
+  color: var(--socar-text-primary) !important;
+  background: var(--socar-surface) !important;
+  background-image: none !important;
   letter-spacing: 0;
 }
 
-:where(button, input, select, textarea) {
-  font: inherit;
+body::before,
+body::after {
+  background-image: none !important;
+}
+
+body :where(button, input, select, textarea) {
+  font-family: inherit !important;
   letter-spacing: 0;
 }
 
-:where(button, .button, .btn, [role="button"]) {
-  border-radius: 12px;
-  transition: transform 100ms cubic-bezier(.42, 0, .58, 1), background-color 100ms cubic-bezier(.42, 0, .58, 1), border-color 100ms cubic-bezier(.42, 0, .58, 1);
+body :where(h1, h2, h3, h4, h5, h6) {
+  color: var(--socar-text-strong) !important;
+  font-family: inherit !important;
+  letter-spacing: -.025em;
+  text-shadow: none !important;
 }
 
-:where(button, .button, .btn, [role="button"]):active {
-  transform: scale(.96);
-}
-
-:where(.btn-primary, .button-primary, .primary-button, button.primary, button[type="submit"]):not(.danger):not(.negative) {
-  background: var(--socar-primary) !important;
-  border-color: var(--socar-primary) !important;
-  color: #fff !important;
-}
-
-:where(.btn-primary, .button-primary, .primary-button, button.primary, button[type="submit"]):not(.danger):not(.negative):active {
-  background: var(--socar-primary-strong) !important;
-}
-
-:where(input, select, textarea) {
-  border-color: var(--socar-border);
-  border-radius: 14px;
-  background: var(--socar-white);
-  color: var(--socar-text-primary);
-}
-
-:where(input, select, textarea):focus {
-  border-color: var(--socar-focus) !important;
-  outline: none;
-}
-
-:where(button, .button, .btn, [role="button"], input, select, textarea, a):focus-visible {
-  outline: 2px solid var(--socar-primary) !important;
-  outline-offset: 2px;
-}
-
-:where(.card, .panel, .section-card, .content-card, .modal-content, .dialog, .sheet, .widget) {
-  border-color: var(--socar-border) !important;
-  border-radius: 16px;
-  box-shadow: 0 1px 2px oklch(0.211 0.026 261 / .04) !important;
-}
-
-:where(header, .header, .topbar, .top-bar, .navbar, .app-bar) {
+body :where(header, .header, .topbar, .top-bar, .navbar, .app-bar, .site-header) {
+  background: var(--socar-white) !important;
+  background-image: none !important;
   border-color: var(--socar-border) !important;
   box-shadow: none !important;
 }
 
-:where(.chip, .tag, .badge, .pill, .filter-chip) {
-  border-radius: 9999px;
+body :where(.card, .panel, .section-card, .content-card, .modal-content, .dialog, .sheet, .widget, .glass-card) {
+  background: var(--socar-white) !important;
+  background-image: none !important;
+  border: 1px solid var(--socar-border) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, .05) !important;
+  backdrop-filter: none !important;
 }
 
-:where(h1, h2, h3, h4) {
-  color: var(--socar-text-strong);
-  letter-spacing: 0;
+body :where(button, .button, .btn, [role="button"]) {
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: transform 100ms ease, background-color 100ms ease, border-color 100ms ease !important;
 }
 
-:where(p, .description, .subtitle, .helper, .caption) {
-  color: inherit;
+body :where(button, .button, .btn, [role="button"]):active {
+  transform: scale(.96) !important;
+}
+
+body :where(.btn-primary, .button-primary, .primary-button, .cta, .cta-button, .accent, .accent-button, button.primary, button[type="submit"], .tab.active, [aria-pressed="true"]):not(.danger):not(.negative):not(.delete) {
+  background: var(--socar-primary) !important;
+  background-image: none !important;
+  border-color: var(--socar-primary) !important;
+  color: #fff !important;
+}
+
+body :where(input, select, textarea) {
+  border: 1px solid var(--socar-border) !important;
+  border-radius: 14px !important;
+  background: var(--socar-white) !important;
+  color: var(--socar-text-primary) !important;
+  box-shadow: none !important;
+}
+
+body :where(input, select, textarea):focus {
+  border-color: var(--socar-focus) !important;
+  outline: none !important;
+}
+
+body :where(button, .button, .btn, [role="button"], input, select, textarea, a):focus-visible {
+  outline: 2px solid var(--socar-primary) !important;
+  outline-offset: 2px;
+}
+
+body :where(.chip, .tag, .badge, .pill, .filter-chip) {
+  border-radius: 9999px !important;
+  box-shadow: none !important;
 }
 
 @media (max-width: 640px) {
-  :where(button, .button, .btn) {
-    min-height: 44px;
-  }
+  body :where(button, .button, .btn) { min-height: 44px; }
 }
 /* SOCAR_FRAME_THEME_END */
+
+/* Project-specific clean lab frame */
+body { background: var(--socar-surface) !important; background-image: none !important; }
+body::before { display: none !important; }
+.site-header { background: rgba(255,255,255,.96) !important; height: 68px; }
+.brand-mark { background: var(--socar-primary) !important; border-radius: 10px !important; transform: none !important; font-family: inherit !important; }
+.hero { min-height: 560px; padding: 64px 0 76px; }
+.hero h1 { font-size: clamp(3.8rem, 7vw, 6.4rem); line-height: .98; letter-spacing: -.07em; }
+.hero h1 span::after { height: 12%; background: var(--socar-primary) !important; opacity: .16; transform: none; border-radius: 999px; }
+.eyebrow, .section-number, .card-category { color: var(--socar-primary) !important; }
+.hero-note, .hero-sketch, .featured-card, .project-card, .search-panel { background: #fff !important; background-image: none !important; border: 1px solid var(--socar-border) !important; border-radius: 16px !important; box-shadow: 0 1px 2px rgba(16,24,40,.05) !important; transform: none !important; }
+.hero-note::before, .hero-note::after, .hero-sketch::before, .hero-sketch::after, .hero-sketch .tape { display: none !important; }
+.sketch-label { background: var(--socar-primary) !important; color: #fff !important; }
+.hero-cta, .project-link { background: var(--socar-primary) !important; color: #fff !important; border-color: var(--socar-primary) !important; box-shadow: none !important; }
+.tag, .status-badge, .category-filter button[aria-pressed="true"] { background: var(--socar-primary-weak) !important; color: var(--socar-primary-heavy) !important; border-color: #cbd9ff !important; }
+.featured, .project-index { background: transparent !important; }
