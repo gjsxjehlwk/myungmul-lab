@@ -1,4 +1,9 @@
-export const magnitude = (...values) => Math.sqrt(values.reduce((sum, value) => sum + (Number(value) || 0) ** 2, 0));
+export const magnitude = (...values) => {
+  const numbers = values.map(nullable);
+  return numbers.every(Number.isFinite)
+    ? Math.sqrt(numbers.reduce((sum, value) => sum + value ** 2, 0))
+    : null;
+};
 
 export function normalizeSample(mode, elapsed, raw, source = "sensor") {
   const sample = { elapsed_ms: Math.max(0, Math.round(elapsed)), source };
@@ -16,13 +21,17 @@ export function normalizeSample(mode, elapsed, raw, source = "sensor") {
   return sample;
 }
 
-function nullable(value) { const number = Number(value); return Number.isFinite(number) ? number : null; }
+function nullable(value) {
+  if (value === null || value === undefined || value === "") return null;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
 function complete(sample) { return [sample.x,sample.y,sample.z].every(Number.isFinite); }
 
 export function summarize(samples, keys, from = -Infinity, to = Infinity) {
   const selected = samples.filter(row => row.elapsed_ms >= from && row.elapsed_ms <= to);
   return Object.fromEntries(keys.map(key => {
-    const values = selected.map(row => Number(row[key])).filter(Number.isFinite);
+    const values = selected.map(row => row[key]).filter(Number.isFinite);
     return [key, values.length ? { min: Math.min(...values), max: Math.max(...values), mean: values.reduce((a,b)=>a+b,0)/values.length, n:values.length } : null];
   }));
 }
