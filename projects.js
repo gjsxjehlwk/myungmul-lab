@@ -99,12 +99,12 @@ window.PROJECTS = [
     notice: ""
   },
   {
-    id: "sign-on",
-    title: "서명온",
-    description: "종이 없이 서명을 수집하고 등록 현황을 한눈에 관리합니다.",
+    id: "training-sign-registry",
+    title: "연수서명부",
+    description: "연수 참석자 서명을 수집하고 등록 현황을 관리하는 Apps Script 서명부입니다.",
     category: "교사 업무",
-    url: "https://signcollet-react.vercel.app",
-    tags: ["서명", "명부", "페이퍼리스", "교사"],
+    url: "https://script.google.com/macros/s/AKfycbwAMCLBd3sJYo8CBs7Qi01qQZQ5NV2CHaYjLJQFokPd012fylnGjLBiaN3c64sk7Pi9cg/exec",
+    tags: ["서명", "연수", "Apps Script", "교사"],
     featured: false,
     thumbnail: "assets/thumbnails/sign.webp",
     notice: ""
