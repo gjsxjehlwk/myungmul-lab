@@ -9,7 +9,7 @@
 - `id`, `title`, `description`, `type`, `category`, `url`
 - `tags`, `featured`, `thumbnail`, `notice`
 
-`type`은 `수업용 도구` 또는 `업무용 도구` 중 하나를 사용합니다.
+`type`은 `수업용 도구`, `수업 보조 도구`, `업무용 도구` 중 하나를 사용합니다.
 
 썸네일은 16:9 WebP 파일을 `assets/thumbnails/`에 저장합니다.
 

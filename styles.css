@@ -1010,6 +1010,14 @@ body::before { display: none !important; }
 .tag, .status-badge, .category-filter button[aria-pressed="true"] { background: var(--socar-primary-weak) !important; color: var(--socar-primary-heavy) !important; border-color: #cbd9ff !important; }
 .featured, .project-index { background: transparent !important; }
 
+.site-header nav .top-chat-link {
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: var(--socar-primary-weak);
+  color: var(--socar-primary-heavy);
+  text-decoration: none;
+}
+
 /* 수업용·업무용 도구 분류 */
 .tool-groups {
   display: grid;
@@ -1072,6 +1080,14 @@ body::before { display: none !important; }
 }
 
 @media (max-width: 720px) {
+  .site-header nav {
+    display: flex;
+  }
+
+  .site-header nav a:not(.top-chat-link) {
+    display: none;
+  }
+
   .tool-groups {
     gap: 56px;
   }

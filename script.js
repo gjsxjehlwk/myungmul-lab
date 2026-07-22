@@ -19,9 +19,15 @@
       description: "학생과 함께 관찰하고 질문하며 결과를 만드는 도구"
     },
     {
+      type: "수업 보조 도구",
+      id: "classroom-support-tools",
+      number: "B",
+      description: "수업의 진행과 참여를 가볍게 돕는 보조 도구"
+    },
+    {
       type: "업무용 도구",
       id: "work-tools",
-      number: "B",
+      number: "C",
       description: "기록과 운영을 간단하게 만들어 교사의 시간을 아끼는 도구"
     }
   ];

@@ -49,7 +49,7 @@ window.PROJECTS = [
   },
   {
     id: "motion-deductive-quiz",
-    title: "2026 모션 퀴즈",
+    title: "배운 내용 확인하기",
     description: "물체의 운동을 단계별 질문으로 추론하는 참여형 물리 퀴즈입니다.",
     type: "수업용 도구",
     category: "과학·탐구",
@@ -99,7 +99,7 @@ window.PROJECTS = [
     id: "random-penalty-roulette",
     title: "랜덤 벌칙 룰렛",
     description: "활동의 긴장감과 재미를 더하는 간단한 무작위 룰렛입니다.",
-    type: "수업용 도구",
+    type: "수업 보조 도구",
     category: "AI·수업 활동",
     url: "https://2026-random-penalty-roulette.vercel.app",
     tags: ["룰렛", "무작위", "학급", "활동"],
