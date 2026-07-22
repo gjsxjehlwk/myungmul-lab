@@ -830,3 +830,126 @@ footer p:nth-child(2) {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* SOCAR_FRAME_THEME_START — shared visual language from coding/design.md */
+:root {
+  --socar-primary: oklch(0.620 0.219 257);
+  --socar-primary-strong: oklch(0.586 0.236 261);
+  --socar-primary-heavy: oklch(0.526 0.224 263);
+  --socar-primary-weak: oklch(0.962 0.022 248);
+  --socar-surface: oklch(0.967 0.004 271);
+  --socar-white: #fff;
+  --socar-text-strong: oklch(0.211 0.026 261);
+  --socar-text-primary: oklch(0.331 0.034 264);
+  --socar-text-secondary: oklch(0.519 0.039 263);
+  --socar-text-tertiary: oklch(0.687 0.035 265);
+  --socar-border: oklch(0.927 0.009 264);
+  --socar-focus: oklch(0.789 0.111 234);
+  --primary: var(--socar-primary) !important;
+  --primary-color: var(--socar-primary) !important;
+  --brand: var(--socar-primary) !important;
+  --accent: var(--socar-primary) !important;
+  --accent-color: var(--socar-primary) !important;
+  --blue: var(--socar-primary) !important;
+  --purple: var(--socar-primary) !important;
+  --violet: var(--socar-primary) !important;
+  --mint: var(--socar-primary) !important;
+  --bg: var(--socar-surface) !important;
+  --background: var(--socar-surface) !important;
+  --paper: var(--socar-surface) !important;
+  --surface: var(--socar-white) !important;
+  --panel: var(--socar-white) !important;
+  --card: var(--socar-white) !important;
+  --ink: var(--socar-text-strong) !important;
+  --text: var(--socar-text-primary) !important;
+  --text-primary: var(--socar-text-primary) !important;
+  --muted: var(--socar-text-secondary) !important;
+  --text-secondary: var(--socar-text-secondary) !important;
+  --line: var(--socar-border) !important;
+  --border: var(--socar-border) !important;
+  --border-color: var(--socar-border) !important;
+}
+
+html {
+  color-scheme: light;
+  background: var(--socar-white);
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif !important;
+  color: var(--socar-text-primary);
+  background: var(--socar-surface) !important;
+  letter-spacing: 0;
+}
+
+:where(button, input, select, textarea) {
+  font: inherit;
+  letter-spacing: 0;
+}
+
+:where(button, .button, .btn, [role="button"]) {
+  border-radius: 12px;
+  transition: transform 100ms cubic-bezier(.42, 0, .58, 1), background-color 100ms cubic-bezier(.42, 0, .58, 1), border-color 100ms cubic-bezier(.42, 0, .58, 1);
+}
+
+:where(button, .button, .btn, [role="button"]):active {
+  transform: scale(.96);
+}
+
+:where(.btn-primary, .button-primary, .primary-button, button.primary, button[type="submit"]):not(.danger):not(.negative) {
+  background: var(--socar-primary) !important;
+  border-color: var(--socar-primary) !important;
+  color: #fff !important;
+}
+
+:where(.btn-primary, .button-primary, .primary-button, button.primary, button[type="submit"]):not(.danger):not(.negative):active {
+  background: var(--socar-primary-strong) !important;
+}
+
+:where(input, select, textarea) {
+  border-color: var(--socar-border);
+  border-radius: 14px;
+  background: var(--socar-white);
+  color: var(--socar-text-primary);
+}
+
+:where(input, select, textarea):focus {
+  border-color: var(--socar-focus) !important;
+  outline: none;
+}
+
+:where(button, .button, .btn, [role="button"], input, select, textarea, a):focus-visible {
+  outline: 2px solid var(--socar-primary) !important;
+  outline-offset: 2px;
+}
+
+:where(.card, .panel, .section-card, .content-card, .modal-content, .dialog, .sheet, .widget) {
+  border-color: var(--socar-border) !important;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px oklch(0.211 0.026 261 / .04) !important;
+}
+
+:where(header, .header, .topbar, .top-bar, .navbar, .app-bar) {
+  border-color: var(--socar-border) !important;
+  box-shadow: none !important;
+}
+
+:where(.chip, .tag, .badge, .pill, .filter-chip) {
+  border-radius: 9999px;
+}
+
+:where(h1, h2, h3, h4) {
+  color: var(--socar-text-strong);
+  letter-spacing: 0;
+}
+
+:where(p, .description, .subtitle, .helper, .caption) {
+  color: inherit;
+}
+
+@media (max-width: 640px) {
+  :where(button, .button, .btn) {
+    min-height: 44px;
+  }
+}
+/* SOCAR_FRAME_THEME_END */
