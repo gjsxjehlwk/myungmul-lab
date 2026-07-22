@@ -97,7 +97,7 @@ window.PROJECTS = [
   },
   {
     id: "random-penalty-roulette",
-    title: "30명 랜덤 뽑기",
+    title: "랜덤뽑기",
     description: "최대 30명까지 번호·이름을 넣고, 뽑힌 항목을 제외하며 이어서 추첨합니다.",
     type: "수업 보조 도구",
     category: "AI·수업 활동",
@@ -121,7 +121,7 @@ window.PROJECTS = [
   },
   {
     id: "classroom-ladder-draw",
-    title: "30명 사다리타기",
+    title: "사다리타기",
     description: "최대 30명의 이름과 결과를 넣고 경로를 따라가며 공정하게 짝·역할을 정합니다.",
     type: "수업 보조 도구",
     category: "AI·수업 활동",
