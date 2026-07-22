@@ -6,8 +6,10 @@
 
 `projects.js`의 `window.PROJECTS` 배열에 아래 필드를 가진 항목을 추가합니다.
 
-- `id`, `title`, `description`, `category`, `url`
+- `id`, `title`, `description`, `type`, `category`, `url`
 - `tags`, `featured`, `thumbnail`, `notice`
+
+`type`은 `수업용 도구` 또는 `업무용 도구` 중 하나를 사용합니다.
 
 썸네일은 16:9 WebP 파일을 `assets/thumbnails/`에 저장합니다.
 

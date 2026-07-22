@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>명물쌤의 탐구실 | 수업과 생활 도구</title>
+    <title>명물쌤의 탐구실 | 수업용·업무용 도구</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
 </head>
   <body>
@@ -39,8 +39,8 @@
         <span>명물쌤의 탐구실</span>
       </a>
       <nav aria-label="주요 메뉴">
-        <a href="#featured">추천 탐구</a>
-        <a href="#projects">모든 프로젝트</a>
+        <a href="#classroom-tools">수업용 도구</a>
+        <a href="#work-tools">업무용 도구</a>
       </nav>
     </header>
 
@@ -50,12 +50,12 @@
           <p class="eyebrow">A PHYSICS TEACHER'S LAB NOTE · No. 13</p>
           <h1 id="hero-title">명물쌤의<br /><span>탐구실</span></h1>
           <p class="hero-intro">
-            교실의 궁금증에서 출발해 직접 만든<br />수업 도구와 생활 실험을 모았습니다.
+            교실의 궁금증에서 출발한 수업 도구와<br />교사의 일손을 덜어주는 업무 도구를 모았습니다.
           </p>
           <a class="primary-button" href="#projects">
             프로젝트 둘러보기 <span aria-hidden="true">↓</span>
           </a>
-          <p class="creator-note">과학·물리 교사가 직접 만든 수업과 생활 도구</p>
+          <p class="creator-note">과학·물리 교사가 직접 만든 수업용·업무용 도구</p>
         </div>
 
         <div class="hero-sketch" aria-label="속도와 시간의 관계를 나타낸 손그림 그래프">
@@ -92,9 +92,9 @@
         <div class="section-heading projects-heading">
           <div>
             <p class="section-number">02 / INDEX</p>
-            <h2 id="projects-title">프로젝트 찾아보기</h2>
+            <h2 id="projects-title">도구 찾아보기</h2>
           </div>
-          <p>제목과 설명, 태그로 필요한 도구를 찾아보세요.</p>
+          <p>수업과 업무를 구분해 필요한 도구를 빠르게 찾아보세요.</p>
         </div>
 
         <div class="search-panel" role="search">
@@ -105,18 +105,16 @@
               <input
                 id="project-search"
                 type="search"
-                placeholder="예: 운동, AI, 물리, 일정"
+                placeholder="예: 운동, AI, 서명, 일정"
                 autocomplete="off"
               />
             </div>
             <button class="reset-button" id="reset-filters" type="button">검색·필터 초기화</button>
           </div>
-          <div class="filter-row" aria-label="프로젝트 카테고리">
-            <button class="filter-button is-active" type="button" data-category="전체" aria-pressed="true">전체</button>
-            <button class="filter-button" type="button" data-category="과학·탐구" aria-pressed="false">과학·탐구</button>
-            <button class="filter-button" type="button" data-category="AI·수업 활동" aria-pressed="false">AI·수업 활동</button>
-            <button class="filter-button" type="button" data-category="교사 업무" aria-pressed="false">교사 업무</button>
-            <button class="filter-button" type="button" data-category="생활·창작 도구" aria-pressed="false">생활·창작 도구</button>
+          <div class="filter-row" aria-label="도구 용도">
+            <button class="filter-button is-active" type="button" data-type="전체" aria-pressed="true">전체 도구</button>
+            <button class="filter-button" type="button" data-type="수업용 도구" aria-pressed="false">수업용 도구</button>
+            <button class="filter-button" type="button" data-type="업무용 도구" aria-pressed="false">업무용 도구</button>
           </div>
         </div>
 
@@ -125,7 +123,7 @@
           <span aria-hidden="true">● 운영 중인 프로젝트</span>
         </div>
 
-        <div class="project-grid" id="project-list"></div>
+        <div class="tool-groups" id="project-list"></div>
         <div class="empty-state" id="empty-state" hidden>
           <p class="empty-icon" aria-hidden="true">∅</p>
           <h3>찾는 프로젝트가 없어요</h3>

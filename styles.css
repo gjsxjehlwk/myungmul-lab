@@ -1009,3 +1009,91 @@ body::before { display: none !important; }
 .hero-cta, .project-link { background: var(--socar-primary) !important; color: #fff !important; border-color: var(--socar-primary) !important; box-shadow: none !important; }
 .tag, .status-badge, .category-filter button[aria-pressed="true"] { background: var(--socar-primary-weak) !important; color: var(--socar-primary-heavy) !important; border-color: #cbd9ff !important; }
 .featured, .project-index { background: transparent !important; }
+
+/* 수업용·업무용 도구 분류 */
+.tool-groups {
+  display: grid;
+  gap: 72px;
+}
+
+.tool-group {
+  scroll-margin-top: 92px;
+}
+
+.tool-group-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--socar-border);
+}
+
+.tool-group-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tool-group-number {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--socar-primary-weak);
+  color: var(--socar-primary-heavy);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.tool-group-heading h3 {
+  margin: 0;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  line-height: 1.25;
+}
+
+.tool-group-heading p {
+  margin: 5px 0 0;
+  color: var(--socar-text-secondary);
+  font-size: 0.9rem;
+}
+
+.tool-group-heading > strong {
+  flex: 0 0 auto;
+  padding: 7px 12px;
+  border-radius: 9999px;
+  background: var(--socar-white);
+  border: 1px solid var(--socar-border);
+  color: var(--socar-text-secondary);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 720px) {
+  .tool-groups {
+    gap: 56px;
+  }
+
+  .tool-group-heading {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tool-group-title {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tool-group-number {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .tool-group-heading p {
+    max-width: 250px;
+  }
+}

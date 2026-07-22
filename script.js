@@ -11,7 +11,22 @@
   const emptyResetButton = document.querySelector("#empty-reset");
   const filterButtons = Array.from(document.querySelectorAll(".filter-button"));
 
-  let activeCategory = "전체";
+  const toolGroups = [
+    {
+      type: "수업용 도구",
+      id: "classroom-tools",
+      number: "A",
+      description: "학생과 함께 관찰하고 질문하며 결과를 만드는 도구"
+    },
+    {
+      type: "업무용 도구",
+      id: "work-tools",
+      number: "B",
+      description: "기록과 운영을 간단하게 만들어 교사의 시간을 아끼는 도구"
+    }
+  ];
+
+  let activeType = "전체";
 
   const normalize = (value) =>
     String(value || "")
@@ -43,7 +58,7 @@
           <span class="status-badge"><i aria-hidden="true"></i>운영 중</span>
         </a>
         <div class="card-body">
-          <p class="card-category">${escapeHTML(project.category)}</p>
+          <p class="card-category">${escapeHTML(project.type)} · ${escapeHTML(project.category)}</p>
           <h3>${escapeHTML(project.title)}</h3>
           <p class="card-description">${escapeHTML(project.description)}</p>
           ${notice}
@@ -64,7 +79,7 @@
 
   function updateFilterButtons() {
     filterButtons.forEach((button) => {
-      const selected = button.dataset.category === activeCategory;
+      const selected = button.dataset.type === activeType;
       button.classList.toggle("is-active", selected);
       button.setAttribute("aria-pressed", String(selected));
     });
@@ -73,23 +88,44 @@
   function renderProjects() {
     const query = normalize(searchInput.value);
     const filtered = projects.filter((project) => {
-      const categoryMatches = activeCategory === "전체" || project.category === activeCategory;
+      const typeMatches = activeType === "전체" || project.type === activeType;
       const searchableText = normalize([
         project.title,
         project.description,
+        project.type,
+        project.category,
         ...project.tags
       ].join(" "));
-      return categoryMatches && (!query || searchableText.includes(query));
+      return typeMatches && (!query || searchableText.includes(query));
     });
 
-    projectList.innerHTML = filtered.map((project) => cardTemplate(project)).join("");
+    projectList.innerHTML = toolGroups
+      .map((group) => {
+        const items = filtered.filter((project) => project.type === group.type);
+        if (!items.length) return "";
+        return `
+          <section class="tool-group" id="${group.id}" aria-labelledby="${group.id}-title">
+            <div class="tool-group-heading">
+              <div class="tool-group-title">
+                <span class="tool-group-number" aria-hidden="true">${group.number}</span>
+                <div>
+                  <h3 id="${group.id}-title">${escapeHTML(group.type)}</h3>
+                  <p>${escapeHTML(group.description)}</p>
+                </div>
+              </div>
+              <strong>${items.length}개</strong>
+            </div>
+            <div class="project-grid">${items.map((project) => cardTemplate(project)).join("")}</div>
+          </section>`;
+      })
+      .join("");
     projectList.hidden = filtered.length === 0;
     emptyState.hidden = filtered.length !== 0;
-    resultCount.textContent = `전체 ${projects.length}개 중 ${filtered.length}개의 프로젝트`;
+    resultCount.textContent = `전체 ${projects.length}개 중 ${filtered.length}개의 도구`;
   }
 
   function resetFilters() {
-    activeCategory = "전체";
+    activeType = "전체";
     searchInput.value = "";
     updateFilterButtons();
     renderProjects();
@@ -102,7 +138,7 @@
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      activeCategory = button.dataset.category;
+      activeType = button.dataset.type;
       updateFilterButtons();
       renderProjects();
     });
