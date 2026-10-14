@@ -192,6 +192,18 @@ window.PROJECTS = [
     notice: "별칭과 응답은 교사가 삭제할 때까지 전용 스프레드시트에 보관"
   },
   {
+    id: "travel-expense-settlement-helper",
+    title: "관외여비 정산신청서 작성 도우미",
+    description: "출장 정보와 이동 경로를 빠르게 입력해 공식 관외여비 정산신청서와 운임내역 별지를 PDF로 만듭니다.",
+    type: "업무용 도구",
+    category: "교사 업무",
+    url: "https://2026-travel-expense-settlement-help.vercel.app/",
+    tags: ["관외여비", "출장", "정산신청서", "PDF", "교사"],
+    featured: false,
+    thumbnail: "assets/thumbnails/travel-expense-helper.webp",
+    notice: "신청서 내용은 브라우저에 저장 · PDF는 기기에서 생성"
+  },
+  {
     id: "training-sign-registry",
     title: "연수서명부",
     description: "연수 참석자 서명을 수집하고 등록 현황을 관리하는 Apps Script 서명부입니다.",
