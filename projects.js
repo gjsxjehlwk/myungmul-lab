@@ -1,5 +1,17 @@
 window.PROJECTS = [
   {
+    id: "electromagnetic-induction",
+    title: "전자기유도 그래프 탐구 수업",
+    description: "패러데이 법칙으로 실험을 설계하고, 자석·코일·낙하 높이에 따른 유도 전압 그래프를 비교하는 통합과학2 수업입니다.",
+    type: "수업용 도구",
+    category: "과학·탐구",
+    url: "/apps/electromagnetic-induction/",
+    tags: ["통합과학2", "전자기유도", "패러데이 법칙", "MBL", "실험", "프레젠테이션"],
+    featured: true,
+    thumbnail: "assets/thumbnails/electromagnetic-induction.webp",
+    notice: "200 Hz·5초 측정 · 실험 안내와 조작형 그래프"
+  },
+  {
     id: "measurement-uncertainty-calculator",
     title: "측정 오차·불확도 계산기",
     description: "반복 측정값의 평균과 불확도를 계산하고 그래프·오차 원인까지 해석합니다.",
