@@ -1,5 +1,17 @@
 window.PROJECTS = [
   {
+    id: "science-lab-reports",
+    title: "탐구노트 · 과학 실험 보고서",
+    description: "모둠의 측정 자료를 나누고 표·그래프·사진으로 나만의 실험 보고서를 작성합니다. 실험을 돌아보는 성찰까지 기록합니다.",
+    type: "수업용 도구",
+    category: "과학·탐구",
+    url: "https://script.google.com/macros/s/AKfycbzUwJCNHnV3T15lmni-M04DR_FDw3gHHFwg1bTi54KYGNGmkCWjUPASu9AjU_a8ZrqYVA/exec",
+    tags: ["실험", "보고서", "모둠", "CSV", "그래프", "전자기유도"],
+    featured: true,
+    thumbnail: "assets/thumbnails/science-lab-reports.webp",
+    notice: "학생은 개인 6자리 코드 · 교사는 Google 계정으로 입장"
+  },
+  {
     id: "electromagnetic-induction",
     title: "전자기유도 그래프 탐구 수업",
     description: "패러데이 법칙으로 실험을 설계하고, 자석·코일·낙하 높이에 따른 유도 전압 그래프를 비교하는 통합과학2 수업입니다.",
@@ -73,7 +85,7 @@ window.PROJECTS = [
   },
   {
     id: "science-inquiry-talk",
-    title: "탐구톡 — 사이언스 챗봇",
+    title: "과학탐구톡 · 사이언스 챗봇",
     description: "정답 대신 질문과 증거로 학생이 스스로 과학 개념을 발견하도록 돕습니다.",
     type: "수업용 도구",
     category: "AI·수업 활동",
@@ -81,7 +93,7 @@ window.PROJECTS = [
     tags: ["과학", "AI", "챗봇", "탐구", "수업"],
     featured: true,
     thumbnail: "assets/thumbnails/science-chatbot.webp",
-    notice: "교사는 비밀키, 학생은 수업코드로 입장"
+    notice: "학생은 이름·5자리 학번 · 교사는 비밀키로 입장"
   },
   {
     id: "motion-energy-report-docs",
