@@ -5,7 +5,7 @@ window.PROJECTS = [
     description: "모둠의 측정 자료를 나누고 표·그래프·사진으로 나만의 실험 보고서를 작성합니다. 실험을 돌아보는 성찰까지 기록합니다.",
     type: "수업용 도구",
     category: "과학·탐구",
-    url: "https://script.google.com/macros/s/AKfycbzUwJCNHnV3T15lmni-M04DR_FDw3gHHFwg1bTi54KYGNGmkCWjUPASu9AjU_a8ZrqYVA/exec",
+    url: "https://inquiry-notebook.pages.dev/",
     tags: ["실험", "보고서", "모둠", "CSV", "그래프", "전자기유도"],
     featured: true,
     thumbnail: "assets/thumbnails/science-lab-reports.webp",
