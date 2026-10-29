@@ -265,14 +265,14 @@ window.PROJECTS = [
   },
   {
     id: "mp3-silence-adder",
-    title: "MP3 묵음 추가기",
-    description: "오디오 앞뒤에 원하는 길이의 묵음을 손쉽게 덧붙입니다.",
+    title: "MP3 묵음 · 핑크 노이즈 추가기",
+    description: "오디오 앞뒤에 묵음이나 핑크 노이즈를 추가합니다. 여러 파일을 한 번에 처리하고 노이즈 음량도 조절할 수 있습니다.",
     type: "업무용 도구",
     category: "생활·창작 도구",
     url: "https://mp3-silence-adder.vercel.app",
-    tags: ["MP3", "오디오", "편집", "창작"],
+    tags: ["MP3", "묵음", "핑크 노이즈", "오디오 편집"],
     featured: false,
-    thumbnail: "assets/thumbnails/mp3.webp",
+    thumbnail: "assets/thumbnails/mp3-pink-noise.webp",
     notice: ""
   }
 ];
